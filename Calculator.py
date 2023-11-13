@@ -28,10 +28,10 @@ def button_function():
         try:
             label.destroy()
         except:
-            print('nichts zum löschen')
+            print('')
         loesung = eval(entry1)
         label = customtkinter.CTkLabel(
-            app, 
+            app,
             text=f"Lösung: {loesung}",
             height=50,
             corner_radius=17,
@@ -42,7 +42,7 @@ def button_function():
         label.pack(fill='both')
         app.mainloop
     except:
-        print('schiefgelaufen')
+        print('')
 
 def saveFile():
     file = filedialog.asksaveasfile(initialdir="C:\\Users\\Cakow\\PycharmProjects\\Main",
@@ -60,7 +60,6 @@ def saveFile():
     file.close()
 
 
-
 entry = customtkinter.CTkEntry(
     master=app,
     placeholder_text="Rechnung eingeben:",
@@ -70,6 +69,7 @@ entry = customtkinter.CTkEntry(
     corner_radius=17,
     font= ("",17)
 )
+
 entry.pack(fill='both')
 
 button = customtkinter.CTkButton(
@@ -107,18 +107,185 @@ def getRandomZeichen(SWITCHPLUS, SWITCHMINUS, SWITCHGETEILT, SWITCHMAL):
 #    if listezeichen.count > 0:
     return random.choice(listezeichen)
 #    else:
-    print('Geht nicht......')
+#    print('Geht nicht......')
      
 
 def berechnungrandom(entry1, entry2, scroolbar, SWITCHPLUS, SWITCHMINUS, SWITCHMAL, SWITCHGETEILT):
     Value1 = (int(entry1))
     Value2 = (int(entry2))
     SCROOLBAR = (int(scroolbar))
-    
-    print(SCROOLBAR)
-    for i in range(1, SCROOLBAR):
+
+    if SCROOLBAR == 1:
+        entry.delete(0, 'end')
+        ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
         ZAHLEN = random.randint(Value1, Value2)
-        Ergenis = ZAHLEN, getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZAHLEN1 = random.randint(Value1, Value2)
+        test = (ZAHLEN, ZEICHEN, ZAHLEN1)
+        entry.insert(0, test)
+
+    if SCROOLBAR == 2:
+        entry.delete(0, 'end')
+        ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN1 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZAHLEN = random.randint(Value1, Value2)
+        ZAHLEN1 = random.randint(Value1, Value2)
+        ZAHLEN2 = random.randint(Value1, Value2)
+        test = (ZAHLEN, ZEICHEN, ZAHLEN1, ZEICHEN1, ZAHLEN2)
+        entry.insert(0, test)
+
+    if SCROOLBAR == 3:
+        entry.delete(0, 'end')
+        ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN1 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN2 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZAHLEN = random.randint(Value1, Value2)
+        ZAHLEN1 = random.randint(Value1, Value2)
+        ZAHLEN2 = random.randint(Value1, Value2)
+        ZAHLEN3 = random.randint(Value1, Value2)
+        test = (ZAHLEN, ZEICHEN, ZAHLEN1, ZEICHEN1, ZAHLEN2, ZEICHEN2, ZAHLEN3)
+        entry.insert(0, test)
+
+    if SCROOLBAR == 4:
+        entry.delete(0, 'end')
+        ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN1 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN2 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN3 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZAHLEN = random.randint(Value1, Value2)
+        ZAHLEN1 = random.randint(Value1, Value2)
+        ZAHLEN2 = random.randint(Value1, Value2)
+        ZAHLEN3 = random.randint(Value1, Value2)
+        ZAHLEN4 = random.randint(Value1, Value2)
+        test = (ZAHLEN, ZEICHEN, ZAHLEN1, ZEICHEN1, ZAHLEN2, ZEICHEN2, ZAHLEN3, ZEICHEN3, ZAHLEN4)
+        entry.insert(0, test)
+
+    if SCROOLBAR == 5:
+        entry.delete(0, 'end')
+        ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN1 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN2 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN3 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN4 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZAHLEN = random.randint(Value1, Value2)
+        ZAHLEN1 = random.randint(Value1, Value2)
+        ZAHLEN2 = random.randint(Value1, Value2)
+        ZAHLEN3 = random.randint(Value1, Value2)
+        ZAHLEN4 = random.randint(Value1, Value2)
+        ZAHLEN5 = random.randint(Value1, Value2)
+        test = (ZAHLEN, ZEICHEN, ZAHLEN1, ZEICHEN1, ZAHLEN2, ZEICHEN2, ZAHLEN3, ZEICHEN3, ZAHLEN4, ZEICHEN4, ZAHLEN5)
+        entry.insert(0, test)
+
+    if SCROOLBAR == 6:
+        entry.delete(0, 'end')
+        ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN1 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN2 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN3 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN4 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN5 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZAHLEN = random.randint(Value1, Value2)
+        ZAHLEN1 = random.randint(Value1, Value2)
+        ZAHLEN2 = random.randint(Value1, Value2)
+        ZAHLEN3 = random.randint(Value1, Value2)
+        ZAHLEN4 = random.randint(Value1, Value2)
+        ZAHLEN5 = random.randint(Value1, Value2)
+        ZAHLEN6 = random.randint(Value1, Value2)
+        test = (ZAHLEN, ZEICHEN, ZAHLEN1, ZEICHEN1, ZAHLEN2, ZEICHEN2, ZAHLEN3, ZEICHEN3, ZAHLEN4, ZEICHEN4, ZAHLEN5, ZEICHEN5, ZAHLEN6)
+        entry.insert(0, test)
+
+    if SCROOLBAR == 7:
+        entry.delete(0, 'end')
+        ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN1 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN2 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN3 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN4 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN5 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN6 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZAHLEN = random.randint(Value1, Value2)
+        ZAHLEN1 = random.randint(Value1, Value2)
+        ZAHLEN2 = random.randint(Value1, Value2)
+        ZAHLEN3 = random.randint(Value1, Value2)
+        ZAHLEN4 = random.randint(Value1, Value2)
+        ZAHLEN5 = random.randint(Value1, Value2)
+        ZAHLEN6 = random.randint(Value1, Value2)
+        ZAHLEN7 = random.randint(Value1, Value2)
+        test = (ZAHLEN, ZEICHEN, ZAHLEN1, ZEICHEN1, ZAHLEN2, ZEICHEN2, ZAHLEN3, ZEICHEN3, ZAHLEN4, ZEICHEN4, ZAHLEN5, ZEICHEN5, ZAHLEN6, ZEICHEN6, ZAHLEN7)
+        entry.insert(0, test)
+
+    if SCROOLBAR == 8:
+        entry.delete(0, 'end')
+        ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN1 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN2 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN3 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN4 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN5 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN6 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN7 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZAHLEN = random.randint(Value1, Value2)
+        ZAHLEN1 = random.randint(Value1, Value2)
+        ZAHLEN2 = random.randint(Value1, Value2)
+        ZAHLEN3 = random.randint(Value1, Value2)
+        ZAHLEN4 = random.randint(Value1, Value2)
+        ZAHLEN5 = random.randint(Value1, Value2)
+        ZAHLEN6 = random.randint(Value1, Value2)
+        ZAHLEN7 = random.randint(Value1, Value2)
+        ZAHLEN8 = random.randint(Value1, Value2)
+        test = (ZAHLEN, ZEICHEN, ZAHLEN1, ZEICHEN1, ZAHLEN2, ZEICHEN2, ZAHLEN3, ZEICHEN3, ZAHLEN4, ZEICHEN4, ZAHLEN5, ZEICHEN5, ZAHLEN6, ZEICHEN6, ZAHLEN7, ZEICHEN7, ZAHLEN8)
+        entry.insert(0, test)
+
+    if SCROOLBAR == 9:
+        entry.delete(0, 'end')
+        ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN1 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN2 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN3 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN4 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN5 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN6 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN7 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN8 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZAHLEN = random.randint(Value1, Value2)
+        ZAHLEN1 = random.randint(Value1, Value2)
+        ZAHLEN2 = random.randint(Value1, Value2)
+        ZAHLEN3 = random.randint(Value1, Value2)
+        ZAHLEN4 = random.randint(Value1, Value2)
+        ZAHLEN5 = random.randint(Value1, Value2)
+        ZAHLEN6 = random.randint(Value1, Value2)
+        ZAHLEN7 = random.randint(Value1, Value2)
+        ZAHLEN8 = random.randint(Value1, Value2)
+        ZAHLEN9 = random.randint(Value1, Value2)
+        test = (ZAHLEN, ZEICHEN, ZAHLEN1, ZEICHEN1, ZAHLEN2, ZEICHEN2, ZAHLEN3, ZEICHEN3, ZAHLEN4, ZEICHEN4, ZAHLEN5, ZEICHEN5, ZAHLEN6, ZEICHEN6, ZAHLEN7, ZEICHEN7, ZAHLEN8, ZEICHEN8, ZAHLEN9)
+
+        entry.insert(0, test)
+
+    if SCROOLBAR == 10:
+        entry.delete(0, 'end')
+        ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN1 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN2 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN3 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN4 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN5 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN6 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN7 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN8 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZEICHEN9 = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
+        ZAHLEN = random.randint(Value1, Value2)
+        ZAHLEN1 = random.randint(Value1, Value2)
+        ZAHLEN2 = random.randint(Value1, Value2)
+        ZAHLEN3 = random.randint(Value1, Value2)
+        ZAHLEN4 = random.randint(Value1, Value2)
+        ZAHLEN5 = random.randint(Value1, Value2)
+        ZAHLEN6 = random.randint(Value1, Value2)
+        ZAHLEN7 = random.randint(Value1, Value2)
+        ZAHLEN8 = random.randint(Value1, Value2)
+        ZAHLEN9 = random.randint(Value1, Value2)
+        ZAHLEN10 = random.randint(Value1, Value2)
+        test = (ZAHLEN, ZEICHEN, ZAHLEN1, ZEICHEN1, ZAHLEN2, ZEICHEN2, ZAHLEN3, ZEICHEN3, ZAHLEN4, ZEICHEN4, ZAHLEN5, ZEICHEN5, ZAHLEN6, ZEICHEN6, ZAHLEN7, ZEICHEN7, ZAHLEN8, ZEICHEN8, ZAHLEN9, ZEICHEN9, ZAHLEN10)
+        entry.insert(0, test)
+
 
 def openNewWindow():
     global entry1
@@ -138,9 +305,11 @@ def openNewWindow():
         switchmal = switch_var3.get()
         switchgeteilt = switch_var4.get()
         zahl1 = entry1.get()
+
         zahl2 = entry2.get()
         berechnungrandom(zahl1, zahl2, slidervalue, switchplus, switchminus, switchmal, switchgeteilt)
         newWindow.destroy()
+
     Prozeedbutton = customtkinter.CTkButton(
         newWindow, 
         text="Aufgabe Generieren!", 
@@ -177,7 +346,7 @@ def openNewWindow():
         try:
             labelslider.destroy()
         except:
-            print('nichts zum löschen')
+            print()
         labelslider = customtkinter.CTkLabel(
             newWindow, 
             text=f"Anzahl der Benutzen Zahlen: {(int(value))}",
@@ -188,7 +357,7 @@ def openNewWindow():
             font= ("",17)
         )
         labelslider.pack(fill='both')
-        print(value)
+   #     print(value)
 
     slider = customtkinter.CTkSlider(
         newWindow, 
@@ -202,10 +371,10 @@ def openNewWindow():
     slider.pack(fill='both')
 
     def switch_event():
-        print("switch toggled, current value:", switch_var1.get())
-        print(switch_var2.get())
-        print(switch_var3.get())
-        print(switch_var4.get())
+        print()
+        print()
+        print()
+        print()
 
     switch_var1 = customtkinter.StringVar(value="off")
     switch1 = customtkinter.CTkSwitch(
@@ -305,5 +474,5 @@ buttonclose = customtkinter.CTkButton(
 buttonclose.pack(fill='both', side='bottom')
 
 def segmented_button_callback(value):
-    print("segmented button clicked:", value)
+    print()
 app.mainloop()
