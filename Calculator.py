@@ -115,7 +115,18 @@ def berechnungrandom(entry1, entry2, scroolbar, SWITCHPLUS, SWITCHMINUS, SWITCHM
     Value2 = (int(entry2))
     SCROOLBAR = (int(scroolbar))
 
-    if SCROOLBAR == 1:
+    entry.delete(0, 'end')
+    test = ""
+
+    for i in range(0, SCROOLBAR):
+        test = f"{test} {random.randint(Value1, Value2)}"
+        test = f"{test} {getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)}"
+
+    test = f"{test} {random.randint(Value1, Value2)}"
+    entry.insert(0, test.strip())
+
+
+"""     if SCROOLBAR == 1:
         entry.delete(0, 'end')
         ZEICHEN = getRandomZeichen(SWITCHPLUS,SWITCHMINUS,SWITCHGETEILT,SWITCHMAL)
         ZAHLEN = random.randint(Value1, Value2)
@@ -284,7 +295,7 @@ def berechnungrandom(entry1, entry2, scroolbar, SWITCHPLUS, SWITCHMINUS, SWITCHM
         ZAHLEN9 = random.randint(Value1, Value2)
         ZAHLEN10 = random.randint(Value1, Value2)
         test = (ZAHLEN, ZEICHEN, ZAHLEN1, ZEICHEN1, ZAHLEN2, ZEICHEN2, ZAHLEN3, ZEICHEN3, ZAHLEN4, ZEICHEN4, ZAHLEN5, ZEICHEN5, ZAHLEN6, ZEICHEN6, ZAHLEN7, ZEICHEN7, ZAHLEN8, ZEICHEN8, ZAHLEN9, ZEICHEN9, ZAHLEN10)
-        entry.insert(0, test)
+        entry.insert(0, test) """
 
 
 def openNewWindow():
